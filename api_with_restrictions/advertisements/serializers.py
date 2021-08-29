@@ -39,9 +39,7 @@ class AdvertisementSerializer(serializers.ModelSerializer):
         return super().create(validated_data)
 
     def validate(self, data):
-        print(data)
-        print(self.context["request"].user)
-        if len(Advertisement.objects.filter(creator=self.context["request"].user)) > 9:
+        if Advertisement.objects.filter(creator=self.context["request"].user).count() > 10:
             raise Exception('Лимит объявлений превышен')
 
 

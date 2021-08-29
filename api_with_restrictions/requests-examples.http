@@ -19,7 +19,7 @@ Content-Type: application/json
 Authorization: Token e0462e00fc100f870fa319dccc783a93e7d25692
 
 {
-  "title": "user adv",
+  "title": "user adv2",
   "description": "EEEEE"
 }
 
@@ -45,3 +45,10 @@ Content-Type: application/json
 # фильтрация по дате
 GET http://127.0.0.1:8000/api/v1/advertisements/?created_at_before=2022-01-01
 Content-Type: application/json
+###
+
+# фильтрация по статусу
+GET http://127.0.0.1:8000/api/v1/advertisements/?status=CLOSED
+Content-Type: application/json
+
+###
